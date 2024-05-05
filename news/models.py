@@ -11,7 +11,7 @@ class Tag(models.Model):
 class News(models.Model):
     title = models.CharField(max_length=150)
     text = models.TextField()
-    image = models.ImageField()
+    image = models.ImageField(upload_to="news_images")
     tags = models.ManyToManyField(Tag)
 
     def __str__(self):
