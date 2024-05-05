@@ -2,3 +2,5 @@
 manage.py
 zavod_task/__pycache__
 
+news/migrations
+news/__pycache__
