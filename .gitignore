@@ -7,3 +7,6 @@ news/migrations
 news/__pycache__
 
 media
+
+api/__pycache__
+api/migrations
