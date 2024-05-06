@@ -17,9 +17,9 @@
             </button>
             <a class="navbar-brand" href="{% url 'news' %}">NEWS</a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <form class="d-flex">
+                <form action="{% url 'news' %}" method="get" class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Поиск по тегу"
-                           aria-label="Поиск по тегу">
+                           aria-label="Поиск по тегу" name="tag">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>

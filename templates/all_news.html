@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="py-5">
+    {% if not news_list %}
+        <h2>Новостей нет</h2>
+    {% endif %}
         {% for news in news_list %}
             <div class="px-3 py-2">
                 <div class="card" style="width: 18rem;">
