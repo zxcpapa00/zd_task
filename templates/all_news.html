@@ -8,7 +8,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ news.title }}</h5>
                         <p class="card-text">{{ news.text }}</p>
-                        <a href="#" class="btn btn-primary">Подробнее</a>
+                        <a href="{% url 'news-detail' news.id %}" class="btn btn-primary">Подробнее</a>
                     </div>
                 </div>
             </div>

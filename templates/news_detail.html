@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}
+    {{ news.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2 class="text-center">{{ news.title }}</h2>
+        <div class="py-3">
+            <img style="width: 500px; display: block; margin-left: auto; margin-right: auto;" src="{{ news.image.url }}"
+                 alt="...">
+        </div>
+        <p class="text-center">{{ news.text }}</p>
+        <figure class="figure">
+            <figcaption class="figure-caption right">{% for tag in news.tags.all %}
+                <a style="text-decoration: 0; color: blue;" href='#'> #{{ tag }}</a>{% endfor %}</figcaption>
+        </figure>
+    </div>
+
+{% endblock %}
+
